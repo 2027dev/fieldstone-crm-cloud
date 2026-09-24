@@ -1,0 +1,94 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../../app/**/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --color-navy-950: #16143a;
+    --color-navy-900: #211e50;
+    --color-navy-800: #2d2a66;
+    --color-navy-700: #3b3780;
+    --color-brand-50: #f1f0fe;
+    --color-brand-100: #e4e2fd;
+    --color-brand-200: #cbc7fb;
+    --color-brand-500: #6c5ce7;
+    --color-brand-600: #5a4bdb;
+    --color-brand-700: #4a3cc2;
+    --color-go-50: #edf7ee;
+    --color-go-600: #3a7d3e;
+    --color-go-700: #2f6a33;
+    --color-go-800: #255628;
+    --color-link: #1f5fc4;
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+@utility btn {
+    @apply inline-flex items-center justify-center gap-1.5 rounded-md border px-3 py-1.5 text-sm font-semibold whitespace-nowrap transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+@utility btn-primary {
+    @apply btn border-go-600 bg-go-600 text-white shadow-sm hover:border-go-700 hover:bg-go-700;
+}
+
+@utility btn-secondary {
+    @apply btn border-slate-300 bg-white text-slate-800 shadow-sm hover:bg-slate-50;
+}
+
+@utility btn-ghost {
+    @apply btn border-transparent bg-transparent text-slate-700 hover:bg-slate-100;
+}
+
+@utility btn-danger {
+    @apply btn border-red-600 bg-red-600 text-white shadow-sm hover:bg-red-700;
+}
+
+@utility btn-sm {
+    @apply px-2 py-1 text-xs;
+}
+
+@utility input {
+    @apply block w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 shadow-xs placeholder:text-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 focus:outline-none;
+}
+
+@utility label {
+    @apply mb-1 block text-sm font-medium text-slate-700;
+}
+
+@utility card {
+    @apply rounded-lg border border-slate-200 bg-white shadow-xs;
+}
+
+@utility table-head {
+    @apply border-b border-slate-200 bg-white px-3 py-2 text-left text-sm font-semibold whitespace-nowrap text-slate-800;
+}
+
+@utility table-cell {
+    @apply border-b border-slate-100 px-3 py-2 text-sm whitespace-nowrap text-slate-800;
+}
+
+@utility chip {
+    @apply inline-flex items-center gap-1 rounded border border-slate-200 bg-white px-1.5 py-0.5 text-xs text-slate-700;
+}
+
+@utility subnav-link {
+    @apply flex items-center gap-3 rounded-md px-3 py-2 text-[15px] text-slate-800 hover:bg-slate-200/60;
+}
+
+@utility subnav-link-active {
+    @apply bg-brand-100/70 font-semibold text-brand-700 hover:bg-brand-100;
+}
+
+@utility filter-pill {
+    @apply inline-flex items-center gap-1 rounded px-2 py-1 text-sm font-medium text-slate-700 hover:bg-slate-100;
+}
+
+@utility filter-pill-active {
+    @apply bg-brand-50 text-brand-700;
+}
